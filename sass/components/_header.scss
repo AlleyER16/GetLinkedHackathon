@@ -1,11 +1,12 @@
 .header {
-  padding-top: 6.4rem;
+  padding-top: 2.4rem;
   padding-bottom: 2.4rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 
   &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 12.8rem;
   }
 
@@ -28,6 +29,39 @@
     display: flex;
     align-items: center;
     gap: 4.8rem;
+
+    @include responsive(800px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 99999;
+
+      opacity: 0;
+      transform: translateX(-100%);
+
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+      // background: #150e28;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2.4rem;
+      padding: 6.4rem;
+
+      &__link {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+
+      .navbar--open & {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
   }
 
   &__navbar-link {
@@ -35,6 +69,88 @@
     &:visited {
       text-decoration: none;
       color: $text-color;
+    }
+  }
+
+  &__btn {
+    margin-left: 8rem;
+
+    @include responsive(800px) {
+      margin-left: 0;
+    }
+  }
+
+  &__toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    position: relative;
+
+    display: none;
+
+    @media (max-width: 800px) {
+      display: flex;
+    }
+
+    & img {
+      display: block;
+      width: 2.8rem;
+      height: 2.8rem;
+
+      &:first-child {
+        display: block;
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+
+      border-radius: 50%;
+      background-image: radial-gradient(#150e28, #150e28);
+      z-index: 999;
+
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 5rem;
+      height: 5rem;
+      transform: translate(100%, -100%);
+
+      transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+  }
+
+  &__toggle-main {
+    position: relative;
+    z-index: 99999;
+
+    background-color: transparent;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar--open &__toggle {
+    &::after {
+      transform: scale(80);
+    }
+
+    & img {
+      &:first-child {
+        display: none;
+      }
+
+      &:last-child {
+        display: block;
+      }
     }
   }
 }

@@ -15,7 +15,15 @@
     align-items: center;
     gap: 0.8rem;
 
-    // flex-shrink: 0;
+    @include responsive(850px) {
+      position: initial;
+      left: 0;
+      transform: none;
+
+      flex-shrink: 0;
+
+      padding-top: 0.8rem;
+    }
   }
 
   &__line {
@@ -29,7 +37,12 @@
       transform-origin: bottom;
     }
 
-    // flex: 1;
+    @include responsive(850px) {
+      transform: none;
+
+      flex: 1;
+      height: auto;
+    }
   }
 
   &__number {
@@ -54,21 +67,34 @@
       flex: 1;
     }
 
-    // display: flex;
-    // flex-direction: column;
-    // gap: 1.2rem;
+    @include responsive(850px) {
+      flex-direction: column;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+
+    @include responsive(850px) {
+      & br {
+        display: none;
+      }
+    }
   }
 
   &:nth-child(odd) &__content,
   &:nth-child(even) &__date {
     align-items: flex-end;
     text-align: right;
+
+    @include responsive(850px) {
+      align-items: flex-start;
+      text-align: left;
+    }
   }
 
   &__heading {
@@ -79,6 +105,10 @@
 
   &:nth-child(even) &__date {
     order: -1;
+
+    @include responsive(850px) {
+      order: 1;
+    }
   }
 
   &__date {

@@ -6,6 +6,17 @@
     display: flex;
     align-items: center;
     gap: 9.6rem;
+
+    @include responsive(1250px) {
+      gap: 5.8rem;
+    }
+
+    @include responsive(850px) {
+      flex-direction: column;
+
+      max-width: 70rem;
+      text-align: center;
+    }
   }
 
   &__img-block {
@@ -14,11 +25,29 @@
     &--lg {
       flex: 0 0 70rem;
     }
+
+    @include responsive(1250px) {
+      flex: 0 0 50rem;
+    }
+
+    @include responsive(950px) {
+      flex: 0 0 45rem;
+    }
+
+    @include responsive(850px) {
+      flex: initial;
+
+      order: -1;
+    }
   }
 
   &__img {
     display: inline-block;
     max-width: 100%;
+
+    @include responsive(850px) {
+      height: 45rem;
+    }
   }
 
   &__main {
@@ -53,6 +82,10 @@
     gap: 1.2rem;
 
     margin-bottom: 15rem;
+
+    @include responsive(850px) {
+      margin-bottom: 7.2rem;
+    }
   }
 
   &__heading {
@@ -68,6 +101,28 @@
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+
+    @include responsive(850px) {
+      gap: 4.8rem;
+
+      align-items: center;
+
+      & > div {
+        width: 60%;
+      }
+    }
+
+    @include responsive(650px) {
+      & > div {
+        width: 70%;
+      }
+    }
+
+    @include responsive(550px) {
+      & > div {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -94,10 +149,30 @@
     gap: 2.4rem;
 
     position: relative;
+
+    @include responsive(600px) {
+      padding: 0 !important;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 2.4rem;
+
+    @include responsive(1350px) {
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__img-block {
     flex: 0 0 55rem;
+
+    @include responsive(1350px) {
+      display: none;
+    }
   }
 
   &__main {
@@ -107,6 +182,9 @@
     flex-direction: column;
     align-items: center;
     gap: 4.8rem;
+
+    min-width: 0;
+    overflow: hidden;
   }
 
   &__img-container {
@@ -116,6 +194,15 @@
     transform: translateY(-50%);
 
     width: 55rem;
+    max-width: 100%;
+
+    @include responsive(1350px) {
+      position: relative;
+      transform: none;
+      top: 0;
+      margin-bottom: 2.4rem;
+      width: 40rem;
+    }
   }
 
   &__prize-img {
@@ -123,13 +210,33 @@
   }
 
   &__prizes {
-    margin-top: 7rem;
+    padding-top: 7rem !important;
 
     align-self: stretch;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.4rem;
+
+    @include responsive(1350px) {
+      display: flex;
+      justify-content: center;
+    }
+
+    @include responsive(600px) {
+      justify-content: flex-start;
+      overflow-x: scroll;
+      scroll-snap-align: center;
+      padding: 0 2.4rem;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      & > * {
+        flex: 0 0 25rem;
+      }
+    }
   }
 }
 
@@ -155,6 +262,15 @@
 
     & img {
       display: block;
+      max-width: 100%;
+    }
+
+    @include responsive(750px) {
+      padding: 4.8rem 9.6rem;
+    }
+
+    @include responsive(500px) {
+      padding: 4.8rem;
     }
   }
 
@@ -180,6 +296,13 @@
     & > * {
       flex: 1;
     }
+
+    @include responsive(850px) {
+      flex-direction: column;
+
+      max-width: 70rem;
+      text-align: center;
+    }
   }
 
   &__img-block {
@@ -188,6 +311,10 @@
     & img {
       display: inline-block;
       max-width: 100%;
+
+      @include responsive(850px) {
+        height: 50rem;
+      }
     }
   }
 
@@ -196,6 +323,22 @@
     border: 1px solid #d434fe;
     background: rgba(217, 217, 217, 0.03);
     padding: 6.2rem;
+
+    @include responsive(950px) {
+      padding: 6.2rem 3.6rem;
+    }
+  }
+
+  &__info-heading {
+    font-weight: 700;
+    color: #d434fe;
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  &__info-sub-heading {
+    text-align: left;
+    font-weight: 700;
   }
 
   &__list {
@@ -204,6 +347,8 @@
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+
+    text-align: left;
 
     & li {
       display: flex;
@@ -217,6 +362,7 @@
         height: 2.4rem;
         border-radius: 50%;
         background-color: #2de100;
+        margin-top: 0.8rem;
 
         display: flex;
         align-items: center;

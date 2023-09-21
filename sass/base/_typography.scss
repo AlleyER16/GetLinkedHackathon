@@ -3,13 +3,25 @@
 
 html {
   font-size: 62.5%;
+
+  @include responsive(1050px) {
+    font-size: 55%;
+  }
+
+  @include responsive(950px) {
+    font-size: 50%;
+  }
+
+  @include responsive(500px) {
+    font-size: 45%;
+  }
 }
 
 body {
   background-color: $bg-color;
 
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 400;
 
   color: $text-color;
