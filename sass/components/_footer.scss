@@ -1,4 +1,107 @@
 .footer {
-  padding: 7.2rem 0;
+  padding: 7.2rem 0 5.6rem;
   background-color: #100b20;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 45fr 30fr 25fr;
+    column-gap: 12.8rem;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__block-heading {
+    font-weight: 600;
+    color: #d434fe;
+  }
+
+  &__quick-links {
+    margin-top: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+
+    & div {
+      display: block;
+      height: 1.6rem;
+      width: 2px;
+      background-color: #d434fe;
+    }
+  }
+
+  &__menu {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: #fff;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+
+    & span {
+      font-size: 1.2rem;
+      color: #d434fe;
+    }
+
+    & a {
+      &:link,
+      &:visited {
+        text-decoration: none;
+      }
+
+      & ion-icon {
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+        color: #fff;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.6rem;
+
+    & ion-icon {
+      flex-shrink: 0;
+
+      display: block;
+      width: 1.8rem;
+      height: 1.8rem;
+      color: #fff;
+    }
+  }
+
+  &__copyright {
+    grid-column: 1 / -1;
+
+    margin-top: 5.6rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
 }
