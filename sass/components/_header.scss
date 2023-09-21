@@ -1,0 +1,40 @@
+.header {
+  padding-top: 6.4rem;
+  padding-bottom: 2.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 9.6rem;
+  }
+
+  &__brand {
+    margin-right: auto;
+
+    font-family: "ClashDisplay-Bold";
+    font-size: 3.6rem;
+
+    display: flex;
+
+    & span:last-child {
+      color: #d434fe;
+    }
+  }
+
+  &__navbar {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+  }
+
+  &__navbar-link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $text-color;
+    }
+  }
+}

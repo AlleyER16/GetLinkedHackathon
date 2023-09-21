@@ -20,7 +20,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "scss:react": "node-sass sass/main.scss src/App.css -w --source-map true",
+    "scss:ui": "node-sass sass/main.scss ui/assets/css/style.css -w --source-map true",
+    "watch:sass": "npm-run-all --parallel scss:react scss:ui"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +42,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "node-sass": "^9.0.0",
+    "npm-run-all": "^4.1.5"
   }
 }

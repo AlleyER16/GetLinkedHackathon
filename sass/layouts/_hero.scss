@@ -1,0 +1,95 @@
+.hero {
+  padding-top: 3.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+
+  &__container {
+    padding: 0 !important;
+  }
+
+  &__top {
+    padding: 0 2.4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+
+    margin-bottom: 2.4rem;
+  }
+
+  &__top-heading {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 3.6rem;
+  }
+
+  &__top-img {
+    display: block;
+  }
+
+  &__main {
+    padding: 9.6rem 0;
+
+    position: relative;
+  }
+
+  &__main-content {
+    padding: 0 2.4rem;
+  }
+
+  &__heading {
+    font-family: "ClashDisplay-Bold";
+    font-size: 8rem;
+    line-height: 1.25;
+
+    margin-bottom: 2.4rem;
+
+    & img {
+      display: inline-block;
+      margin-bottom: -6px;
+    }
+
+    & span {
+      color: #d434fe;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+
+    margin-bottom: 4.2rem;
+  }
+
+  &__time-blocks {
+    margin-top: 8.4rem;
+
+    display: flex;
+    align-items: center;
+    gap: 3.6rem;
+  }
+
+  &__time-block {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__time {
+    font-size: 6.4rem;
+    font-family: "Unica One", cursive;
+    line-height: 0.9;
+  }
+
+  &__time-unit {
+    display: block;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+    margin-bottom: -2.4rem;
+  }
+}

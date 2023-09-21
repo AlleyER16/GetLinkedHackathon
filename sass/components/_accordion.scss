@@ -1,0 +1,74 @@
+.accordion {
+  overflow: hidden;
+  position: relative;
+
+  height: 5.6rem;
+
+  &--open {
+    height: auto;
+  }
+
+  transition: all 0.3s;
+
+  &:not(:last-child) {
+    margin-bottom: 1.8rem;
+  }
+
+  &__header {
+    background-color: $bg-color;
+    cursor: pointer;
+    position: relative;
+    height: 5.6rem;
+    border-bottom: 1px solid #d434fe;
+
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  &__toggle {
+    cursor: pointer;
+
+    margin-left: auto;
+
+    & ion-icon {
+      display: block;
+      width: 2.4rem;
+      height: 2.4rem;
+      color: #d434fe;
+
+      &:first-child {
+        display: block;
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  &--open &__toggle ion-icon {
+    &:first-child {
+      display: none;
+    }
+
+    &:last-child {
+      display: block;
+    }
+  }
+
+  &__body {
+    padding: 1.8rem 2.4rem;
+
+    position: relative;
+    transform: translateY(-100%);
+
+    transition: all 0.3s;
+  }
+
+  &--open &__body {
+    transform: translateY(0);
+  }
+}

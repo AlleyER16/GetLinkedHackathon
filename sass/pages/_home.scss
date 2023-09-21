@@ -1,0 +1,234 @@
+.info-section {
+  padding: 4.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 9.6rem;
+  }
+
+  &__img-block {
+    flex: 0 0 60rem;
+
+    &--lg {
+      flex: 0 0 70rem;
+    }
+  }
+
+  &__img {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  &__main {
+    flex: 1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+
+    & p span {
+      font-size: 1.6rem;
+      color: #ff26b9;
+      font-weight: 700;
+
+      &.light {
+        color: #fff;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+.timeline-section {
+  padding: 6.4rem 0;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+
+    margin-bottom: 15rem;
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+    font-family: "ClashDisplay-Bold";
+  }
+
+  &__heading-subtext {
+    text-align: center;
+  }
+
+  &__timelines {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+}
+
+.prizes-section {
+  padding: 5.6rem 0 7.2rem;
+  position: relative;
+
+  &__bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.19;
+
+    z-index: -1;
+  }
+
+  &__container {
+    display: flex;
+    gap: 2.4rem;
+
+    position: relative;
+  }
+
+  &__img-block {
+    flex: 0 0 55rem;
+  }
+
+  &__main {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.8rem;
+  }
+
+  &__img-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    width: 55rem;
+  }
+
+  &__prize-img {
+    max-width: 100%;
+  }
+
+  &__prizes {
+    margin-top: 7rem;
+
+    align-self: stretch;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+  }
+}
+
+.partners-section {
+  padding: 7.2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+  &__block {
+    border-radius: 0.5rem;
+    border: 1px solid #d434fe;
+    background: rgba(255, 255, 255, 0.01);
+    padding: 9.6rem 16rem;
+
+    display: grid;
+    grid-template-columns: 1fr 4px 1fr 4px 1fr;
+    gap: 2.4rem;
+
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    & img {
+      display: block;
+    }
+  }
+
+  &__h-divider {
+    height: 4px;
+    background-color: #d434fe;
+  }
+
+  &__v-divider {
+    height: 15rem;
+    background-color: #d434fe;
+  }
+}
+
+.privacy-section {
+  padding: 7.2rem 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 5.6rem;
+
+    & > * {
+      flex: 1;
+    }
+  }
+
+  &__img-block {
+    text-align: right;
+
+    & img {
+      display: inline-block;
+      max-width: 100%;
+    }
+  }
+
+  &__info {
+    border-radius: 0.5rem;
+    border: 1px solid #d434fe;
+    background: rgba(217, 217, 217, 0.03);
+    padding: 6.2rem;
+  }
+
+  &__list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    & li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.6rem;
+
+      & span {
+        flex-shrink: 0;
+
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        background-color: #2de100;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & ion-icon {
+          display: block;
+          color: #fff;
+          width: 1.8rem;
+          height: 1.8rem;
+        }
+      }
+    }
+  }
+}
