@@ -3,6 +3,13 @@
   padding-bottom: 2.4rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+  }
+
   &__container {
     display: flex;
     align-items: center;

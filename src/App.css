@@ -140,6 +140,11 @@
   padding-top: 2.4rem;
   padding-bottom: 2.4rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18); }
+  .header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; }
   .header__container {
     display: flex;
     align-items: center;
