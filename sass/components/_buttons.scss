@@ -13,4 +13,30 @@
   border: none;
   color: #fff;
   border-radius: 4px;
+
+  &.active {
+    background: transparent;
+
+    background-image: linear-gradient(#9a39ff, #ff29b9);
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      left: 2px;
+      background-color: #150e28;
+      border-radius: 5px;
+      box-sizing: border-box;
+      z-index: -1;
+      transition: all 0.3s;
+    }
+
+    &:hover::before {
+      opacity: 0;
+    }
+  }
 }
