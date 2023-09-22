@@ -13,15 +13,6 @@
     }
   }
 
-  &__flare-2 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    transform: translate(50%, 50%);
-    opacity: 0.68;
-  }
-
   &__left {
     flex: 0 0 45rem;
 

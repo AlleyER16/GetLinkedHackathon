@@ -734,13 +734,6 @@ body {
     @media only screen and (max-width: 700px) {
       .contact__container {
         gap: 0; } }
-  .contact__flare-2 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    transform: translate(50%, 50%);
-    opacity: 0.68; }
   .contact__left {
     flex: 0 0 45rem; }
     @media only screen and (max-width: 950px) {
