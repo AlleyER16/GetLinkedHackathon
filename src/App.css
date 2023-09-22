@@ -978,7 +978,9 @@ body {
         margin: auto; } }
     @media only screen and (max-width: 450px) {
       .prizes-section__prizes {
-        overflow-x: scroll; }
+        overflow-x: scroll;
+        max-width: initial;
+        margin: initial; }
         .prizes-section__prizes::-webkit-scrollbar {
           display: none; }
         .prizes-section__prizes > * {

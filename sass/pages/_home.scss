@@ -245,6 +245,8 @@
 
     @include responsive(450px) {
       overflow-x: scroll;
+      max-width: initial;
+      margin: initial;
 
       &::-webkit-scrollbar {
         display: none;
