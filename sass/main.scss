@@ -5,7 +5,9 @@
 @import "./components/accordion";
 @import "./components/buttons";
 @import "./components/footer";
+@import "./components/form";
 @import "./components/header";
+@import "./components/modal";
 @import "./components/prize";
 @import "./components/timeline";
 
@@ -16,4 +18,6 @@
 @import "./base/typography";
 @import "./base/utilities";
 
+@import "./pages/contact";
 @import "./pages/home";
+@import "./pages/register";

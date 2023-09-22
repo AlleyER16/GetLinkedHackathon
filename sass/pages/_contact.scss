@@ -1,0 +1,132 @@
+.contact {
+  padding-bottom: 4.8rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+
+    @include responsive(700px) {
+      gap: 0;
+    }
+  }
+
+  &__left {
+    flex: 0 0 45rem;
+
+    @include responsive(950px) {
+      flex: 0 0 35rem;
+    }
+
+    @include responsive(650px) {
+      display: none;
+    }
+  }
+
+  &__heading {
+    color: #d434fe;
+    font-family: "ClashDisplay-Semibold";
+    font-size: 3.2rem;
+  }
+
+  &__infos {
+    margin-top: 2.4rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+
+    font-size: 1.6rem;
+  }
+
+  &__share {
+    margin-top: 3.6rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    & p {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: #d434fe;
+    }
+
+    &--1 {
+      align-items: center;
+
+      display: none;
+
+      @include responsive(650px) {
+        display: flex;
+      }
+    }
+  }
+
+  &__main {
+    flex: 1;
+
+    border-radius: 1.2rem;
+    background-color: rgba(#ffffff, 0.03);
+    box-shadow: 0px 4px 4px 0px rgba(#000, 0.25);
+    padding: 7.2rem 9.6rem;
+
+    @include responsive(800px) {
+      padding: 4.8rem;
+    }
+
+    @include responsive(650px) {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    @include responsive(400px) {
+      padding: 2.4rem;
+    }
+  }
+
+  &__back {
+    background-color: transparent;
+    border: none;
+
+    margin-bottom: 4.8rem;
+
+    display: none;
+
+    @include responsive(650px) {
+      display: block;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    margin-bottom: 3.6rem;
+
+    & h3 {
+      color: #d434fe;
+      font-family: "ClashDisplay-Semibold";
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+
+    margin-bottom: 3.6rem;
+
+    display: none;
+
+    @include responsive(650px) {
+      display: block;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+}

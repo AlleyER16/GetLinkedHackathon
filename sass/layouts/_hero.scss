@@ -34,6 +34,10 @@
       display: inline-flex;
       max-width: initial;
     }
+
+    @include responsive(700px) {
+      gap: 0;
+    }
   }
 
   &__top-heading {
