@@ -26,6 +26,10 @@ body {
 
   color: $text-color;
   line-height: 27.5px;
+
+  @include responsive(360px) {
+    font-size: 13px;
+  }
 }
 
 .heading-primary {

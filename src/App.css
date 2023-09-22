@@ -104,7 +104,7 @@
     align-items: center;
     gap: 1.8rem; }
     .footer__socials span {
-      font-size: 1.2rem;
+      font-size: 12px;
       color: #d434fe; }
     .footer__socials a:link, .footer__socials a:visited {
       text-decoration: none; }
@@ -134,7 +134,7 @@
   .footer__copyright {
     grid-column: 1 / -1;
     text-align: center;
-    font-size: 1.2rem; }
+    font-size: 12px; }
 
 .grid-full {
   grid-column: 1 /-1; }
@@ -173,12 +173,14 @@ textarea.form-input {
   height: auto; }
 
 .header {
-  padding-top: 2.4rem;
-  padding-bottom: 2.4rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   background-color: #150e28;
-  z-index: 99; }
+  z-index: 99;
+  height: 8.2rem;
+  position: sticky;
+  top: 0; }
   .header--1 {
+    position: relative;
     border-bottom: none;
     margin-bottom: 5.6rem; }
     @media only screen and (max-width: 650px) {
@@ -194,6 +196,7 @@ textarea.form-input {
     margin-right: auto;
     font-family: "ClashDisplay-Bold";
     font-size: 3.6rem;
+    cursor: pointer;
     display: flex; }
     .header__brand span:last-child {
       color: #d434fe; }
@@ -302,19 +305,34 @@ textarea.form-input {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media only screen and (max-width: 400px) {
+    .modal {
+      padding: 2.4rem; } }
   .modal__img {
     display: block;
-    max-width: 80%;
     height: 30rem; }
+    @media only screen and (max-width: 400px) {
+      .modal__img {
+        width: 80%;
+        height: auto;
+        margin-bottom: 3.6rem; } }
   .modal__heading {
     font-size: 3.2rem;
     font-weight: 600;
     text-align: center;
     line-height: 1.4;
     margin-bottom: 1.2rem; }
+    @media only screen and (max-width: 400px) {
+      .modal__heading {
+        font-size: 2.4rem;
+        margin-bottom: 1.8rem; } }
   .modal__text {
     font-weight: 600;
-    text-align: center; }
+    text-align: center;
+    line-height: 1.4; }
+    @media only screen and (max-width: 400px) {
+      .modal__text {
+        font-size: 12px; } }
   .modal__btn {
     align-self: stretch;
     margin-top: 3.2rem; }
@@ -331,19 +349,21 @@ textarea.form-input {
 .prize {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 25rem; }
-  @media only screen and (max-width: 600px) {
-    .prize {
-      max-width: initial; } }
+  align-items: center; }
   .prize:nth-child(2) {
     transform: translateY(-7rem); }
+    @media only screen and (max-width: 650px) {
+      .prize:nth-child(2) {
+        transform: translateY(-3rem); } }
   .prize__img {
     display: block;
     width: 70%; }
   .prize:nth-child(2) .prize__img {
     width: 100%;
     transform: scale(1.1); }
+    @media only screen and (max-width: 650px) {
+      .prize:nth-child(2) .prize__img {
+        transform: scale(1.05); } }
   .prize__main {
     margin-top: -10rem;
     z-index: -1;
@@ -352,6 +372,13 @@ textarea.form-input {
     border: 1px solid #d434fe;
     background-color: rgba(212, 52, 254, 0.12);
     border-radius: 0.8rem; }
+    @media only screen and (max-width: 650px) {
+      .prize__main {
+        padding: 14.8rem 1.2rem 2.4rem; } }
+    @media only screen and (max-width: 500px) {
+      .prize__main {
+        margin-top: -8rem;
+        padding: 11rem 1.2rem 2.4rem; } }
   .prize:nth-child(2) .prize__main {
     border: 1px solid #903aff;
     background-color: rgba(144, 58, 255, 0.12); }
@@ -361,18 +388,30 @@ textarea.form-input {
     align-items: center;
     gap: 0.8rem;
     margin-bottom: 2.4rem; }
+    @media only screen and (max-width: 650px) {
+      .prize__position {
+        gap: 0; } }
     .prize__position span:first-child {
       font-weight: 700;
       font-size: 4rem; }
+      @media only screen and (max-width: 650px) {
+        .prize__position span:first-child {
+          font-size: 20px; } }
     .prize__position span:last-child {
       font-weight: 600;
       font-size: 2.4rem; }
+      @media only screen and (max-width: 650px) {
+        .prize__position span:last-child {
+          font-size: 18px; } }
   .prize__price {
     font-size: 3.2rem;
     font-weight: 700;
     color: #d434fe;
     text-align: center;
     word-wrap: break-word; }
+    @media only screen and (max-width: 650px) {
+      .prize__price {
+        font-size: 18px; } }
   .prize:nth-child(2) .prize__price {
     color: #903aff; }
 
@@ -504,7 +543,7 @@ textarea.form-input {
       .hero__top-img {
         height: 1.2rem; } }
   .hero__main {
-    padding: 12.8rem 0;
+    padding: 17rem 0;
     display: flex; }
     @media only screen and (max-width: 1200px) {
       .hero__main {
@@ -551,6 +590,9 @@ textarea.form-input {
   .hero__text {
     font-size: 2rem;
     margin-bottom: 4.2rem; }
+    @media only screen and (max-width: 450px) {
+      .hero__text br {
+        display: none; } }
   .hero__time-blocks {
     margin-top: 8.4rem;
     display: flex;
@@ -571,21 +613,20 @@ textarea.form-input {
     right: 0;
     z-index: -1;
     height: 115%;
-    width: 55%;
-    margin-bottom: -2.4rem; }
-    @media only screen and (max-width: 1550px) {
+    width: 98rem;
+    margin-bottom: -2.4rem;
+    transition: all 0.3s; }
+    @media only screen and (max-width: 1400px) {
       .hero__img {
-        width: 60%; } }
-    @media only screen and (max-width: 1350px) {
+        margin-right: -10rem; } }
+    @media only screen and (max-width: 1300px) {
       .hero__img {
-        width: 65%; } }
-    @media only screen and (max-width: 1250px) {
-      .hero__img {
-        width: 70%; } }
+        margin-right: -20rem; } }
     @media only screen and (max-width: 1200px) {
       .hero__img {
         position: initial;
         margin-bottom: 0;
+        margin-right: 0;
         width: 100%;
         height: auto; } }
 
@@ -622,6 +663,9 @@ body {
   font-weight: 400;
   color: #fff;
   line-height: 27.5px; }
+  @media only screen and (max-width: 360px) {
+    body {
+      font-size: 13px; } }
 
 .heading-primary {
   font-size: 3.2rem;
@@ -666,10 +710,18 @@ body {
   .contact__container {
     display: flex;
     align-items: center;
-    gap: 2.4rem; }
+    gap: 2.4rem;
+    position: relative; }
     @media only screen and (max-width: 700px) {
       .contact__container {
         gap: 0; } }
+  .contact__flare-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transform: translate(50%, 50%);
+    opacity: 0.68; }
   .contact__left {
     flex: 0 0 45rem; }
     @media only screen and (max-width: 950px) {
@@ -751,6 +803,8 @@ body {
 .info-section {
   padding: 4.8rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18); }
+  .info-section--overview {
+    background-color: #140d27; }
   .info-section__container {
     display: flex;
     align-items: center;
@@ -783,6 +837,9 @@ body {
     @media only screen and (max-width: 850px) {
       .info-section__img {
         height: 45rem; } }
+    @media only screen and (max-width: 450px) {
+      .info-section__img--mobile-reduce {
+        height: 35rem; } }
   .info-section__main {
     flex: 1; }
   .info-section__content {
@@ -790,12 +847,9 @@ body {
     flex-direction: column;
     gap: 2.8rem; }
     .info-section__content p span {
-      font-size: 1.6rem;
+      font-size: 16px;
       color: #ff26b9;
       font-weight: 700; }
-      .info-section__content p span.light {
-        color: #fff;
-        font-size: 1.4rem; }
 
 .timeline-section {
   padding: 6.4rem 0; }
@@ -813,6 +867,9 @@ body {
     font-family: "ClashDisplay-Bold"; }
   .timeline-section__heading-subtext {
     text-align: center; }
+    @media only screen and (max-width: 400px) {
+      .timeline-section__heading-subtext br {
+        display: none; } }
   .timeline-section__timelines {
     display: flex;
     flex-direction: column;
@@ -846,10 +903,8 @@ body {
   .prizes-section__container {
     display: flex;
     gap: 2.4rem;
-    position: relative; }
-    @media only screen and (max-width: 600px) {
-      .prizes-section__container {
-        padding: 0 !important; } }
+    position: relative;
+    padding: 0 !important; }
   .prizes-section__header {
     display: flex;
     flex-direction: column;
@@ -858,6 +913,9 @@ body {
       .prizes-section__header {
         align-items: center;
         text-align: center; } }
+    @media only screen and (max-width: 400px) {
+      .prizes-section__header p br {
+        display: none; } }
   .prizes-section__img-block {
     flex: 0 0 55rem; }
     @media only screen and (max-width: 1350px) {
@@ -890,23 +948,22 @@ body {
   .prizes-section__prizes {
     padding-top: 7rem !important;
     align-self: stretch;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.4rem; }
-    @media only screen and (max-width: 1350px) {
+    display: flex;
+    gap: 2.4rem;
+    padding: 0 2.4rem; }
+    .prizes-section__prizes > * {
+      flex: 1; }
+    @media (max-width: 1350px) {
       .prizes-section__prizes {
-        display: flex;
-        justify-content: center; } }
-    @media only screen and (max-width: 600px) {
+        max-width: 79.8rem;
+        margin: auto; } }
+    @media only screen and (max-width: 450px) {
       .prizes-section__prizes {
-        justify-content: flex-start;
-        overflow-x: scroll;
-        scroll-snap-align: center;
-        padding: 0 2.4rem; }
+        overflow-x: scroll; }
         .prizes-section__prizes::-webkit-scrollbar {
           display: none; }
         .prizes-section__prizes > * {
-          flex: 0 0 25rem; } }
+          flex: 0 0 20rem; } }
 
 .partners-section {
   padding: 7.2rem 0;
@@ -1002,6 +1059,18 @@ body {
           width: 1.8rem;
           height: 1.8rem; }
 
+.faq-heading {
+  font-size: 12px; }
+  .faq-heading span {
+    font-weight: 700; }
+  @media only screen and (max-width: 350px) {
+    .faq-heading br {
+      display: none; } }
+
+@media only screen and (max-width: 500px) {
+  .privacy-heading br {
+    display: none; } }
+
 .register {
   padding-bottom: 4.8rem; }
   .register__container {
@@ -1067,7 +1136,6 @@ body {
         display: block; } }
   .register__img {
     display: inline-block;
-    max-width: 50%;
     height: 30rem; }
   .register__text {
     display: flex;
@@ -1111,6 +1179,9 @@ body {
       .register__form-grid {
         grid-template-columns: 70fr 30fr;
         gap: 1.8rem; } }
+    @media only screen and (max-width: 360px) {
+      .register__form-grid {
+        grid-template-columns: 60fr 40fr; } }
   .register__form-footer {
     grid-column: 1 / -1;
     display: flex;
@@ -1154,5 +1225,13 @@ body {
         display: none; }
       .register__accept input:checked::after {
         display: block; }
+  .register__btn {
+    display: flex;
+    justify-content: center; }
+    .register__btn button {
+      flex: 1; }
+      @media only screen and (max-width: 400px) {
+        .register__btn button {
+          flex: initial; } }
 
 /*# sourceMappingURL=App.css.map */

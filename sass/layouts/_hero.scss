@@ -63,7 +63,7 @@
   }
 
   &__main {
-    padding: 12.8rem 0;
+    padding: 17rem 0;
 
     display: flex;
 
@@ -133,6 +133,12 @@
     font-size: 2rem;
 
     margin-bottom: 4.2rem;
+
+    @include responsive(450px) {
+      & br {
+        display: none;
+      }
+    }
   }
 
   &__time-blocks {
@@ -165,25 +171,23 @@
     z-index: -1;
 
     height: 115%;
-    width: 55%;
+    width: 98rem;
 
     margin-bottom: -2.4rem;
+    transition: all 0.3s;
 
-    @include responsive(1550px) {
-      width: 60%;
+    @include responsive(1400px) {
+      margin-right: -10rem;
     }
 
-    @include responsive(1350px) {
-      width: 65%;
-    }
-
-    @include responsive(1250px) {
-      width: 70%;
+    @include responsive(1300px) {
+      margin-right: -20rem;
     }
 
     @include responsive(1200px) {
       position: initial;
       margin-bottom: 0;
+      margin-right: 0;
       width: 100%;
       height: auto;
     }

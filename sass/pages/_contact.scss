@@ -6,9 +6,20 @@
     align-items: center;
     gap: 2.4rem;
 
+    position: relative;
+
     @include responsive(700px) {
       gap: 0;
     }
+  }
+
+  &__flare-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transform: translate(50%, 50%);
+    opacity: 0.68;
   }
 
   &__left {

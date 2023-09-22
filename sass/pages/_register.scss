@@ -92,7 +92,6 @@
 
   &__img {
     display: inline-block;
-    max-width: 50%;
     height: 30rem;
   }
 
@@ -156,6 +155,10 @@
       grid-template-columns: 70fr 30fr;
       gap: 1.8rem;
     }
+
+    @include responsive(360px) {
+      grid-template-columns: 60fr 40fr;
+    }
   }
 
   &__form-footer {
@@ -215,6 +218,19 @@
 
       &:checked::after {
         display: block;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+
+    & button {
+      flex: 1;
+
+      @include responsive(400px) {
+        flex: initial;
       }
     }
   }

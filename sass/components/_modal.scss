@@ -15,10 +15,20 @@
   flex-direction: column;
   align-items: center;
 
+  @include responsive(400px) {
+    padding: 2.4rem;
+  }
+
   &__img {
     display: block;
-    max-width: 80%;
     height: 30rem;
+
+    @include responsive(400px) {
+      width: 80%;
+      height: auto;
+
+      margin-bottom: 3.6rem;
+    }
   }
 
   &__heading {
@@ -28,11 +38,21 @@
     line-height: 1.4;
 
     margin-bottom: 1.2rem;
+
+    @include responsive(400px) {
+      font-size: 2.4rem;
+      margin-bottom: 1.8rem;
+    }
   }
 
   &__text {
     font-weight: 600;
     text-align: center;
+    line-height: 1.4;
+
+    @include responsive(400px) {
+      font-size: 12px;
+    }
   }
 
   &__btn {
