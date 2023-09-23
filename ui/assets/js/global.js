@@ -41,3 +41,26 @@ allLinks.forEach(function (link) {
     }
   });
 });
+
+///////////////////////////////////////////////////////////
+// Sticky Navigation functionality
+const heroSectionEl = document.querySelector(".hero");
+const obs = new IntersectionObserver(
+  function (entries) {
+    const [ent] = entries;
+
+    if (!ent.isIntersecting) {
+      headerEl.classList.add("sticky");
+      heroSectionEl.classList.add("sticky");
+    } else {
+      headerEl.classList.remove("sticky");
+      heroSectionEl.classList.remove("sticky");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${convertRemToPixels(8.2)}px`,
+  }
+);
+obs.observe(heroSectionEl);

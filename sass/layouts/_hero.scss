@@ -3,6 +3,10 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   overflow: hidden;
 
+  &.sticky {
+    margin-top: 8.2rem;
+  }
+
   @include responsive(1200px) {
     text-align: center;
 

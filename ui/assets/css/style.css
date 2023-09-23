@@ -195,6 +195,12 @@ textarea.form-input {
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   z-index: 99;
   height: 8.2rem; }
+  .header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #150e28; }
   .header--1 {
     position: relative;
     border-bottom: none;
@@ -516,6 +522,8 @@ textarea.form-input {
   padding-top: 3.2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   overflow: hidden; }
+  .hero.sticky {
+    margin-top: 8.2rem; }
   @media only screen and (max-width: 1200px) {
     .hero {
       text-align: center;
