@@ -1,8 +1,8 @@
 .modal {
   position: fixed;
-  top: 50%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -120%);
   z-index: 9999999999;
   width: 70rem;
   max-width: calc(100vw - 4.8rem);
@@ -10,6 +10,12 @@
   background-color: rgba($color: #fff, $alpha: 0.01);
   border-radius: 5px;
   padding: 4.8rem;
+  transition: all 0.3s;
+
+  &--open {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   display: flex;
   flex-direction: column;

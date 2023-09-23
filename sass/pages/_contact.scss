@@ -1,4 +1,10 @@
 .contact {
+  margin-top: 9.6rem;
+
+  @include responsive(650px) {
+    margin-top: 0;
+  }
+
   &__container {
     display: flex;
     align-items: center;
