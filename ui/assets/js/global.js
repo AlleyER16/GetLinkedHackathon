@@ -27,8 +27,18 @@ allLinks.forEach(function (link) {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         const scrollEl = document.querySelector(href);
+
+        const overviewToFaqSection = document.querySelector(
+          ".overview-to-faq-section"
+        );
+
         window.scroll({
-          top: scrollEl.offsetTop - convertRemToPixels(8.2),
+          top:
+            (["#faqs", "#overview"].includes(href)
+              ? overviewToFaqSection.offsetTop
+              : 0) +
+            scrollEl.offsetTop -
+            convertRemToPixels(8.2),
           behavior: "smooth",
         });
       }
