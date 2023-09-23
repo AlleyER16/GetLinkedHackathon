@@ -50,11 +50,9 @@ const obs = new IntersectionObserver(
     const [ent] = entries;
 
     if (!ent.isIntersecting) {
-      headerEl.classList.add("sticky");
-      heroSectionEl.classList.add("sticky");
+      document.body.classList.add("sticky");
     } else {
-      headerEl.classList.remove("sticky");
-      heroSectionEl.classList.remove("sticky");
+      document.body.classList.remove("sticky");
     }
   },
   {

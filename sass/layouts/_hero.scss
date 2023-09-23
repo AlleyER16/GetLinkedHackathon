@@ -3,7 +3,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   overflow: hidden;
 
-  &.sticky {
+  .sticky & {
     margin-top: 8.2rem;
   }
 
@@ -78,13 +78,55 @@
   }
 
   &__main-content {
+    position: relative;
+
     @include responsive(1200px) {
-      margin-top: 4.8rem;
+      margin-top: 7.2rem;
       padding: 0 2.4rem;
 
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+  }
+
+  &__star-1 {
+    position: absolute;
+    top: -12rem;
+    left: 5.2rem;
+
+    @include responsive(800px) {
+      top: -6rem;
+    }
+
+    @include responsive(450px) {
+      left: 15rem;
+      top: -3rem;
+    }
+  }
+
+  &__star-2 {
+    position: absolute;
+    top: -7rem;
+    right: 0;
+
+    @include responsive(1200px) {
+      right: 4.8rem;
+    }
+  }
+
+  &__star-3 {
+    position: absolute;
+    bottom: 10rem;
+    right: 25rem;
+
+    @include responsive(700px) {
+      right: 15rem;
+    }
+
+    @include responsive(450px) {
+      bottom: 15rem;
+      right: 4.8rem;
     }
   }
 
@@ -95,22 +137,7 @@
 
     margin-bottom: 2.4rem;
 
-    & img {
-      display: inline-block;
-      margin-bottom: -6px;
-
-      @include responsive(700px) {
-        height: 5.6rem;
-      }
-
-      @include responsive(550px) {
-        height: 4.8rem;
-      }
-
-      @include responsive(450px) {
-        height: 3.6rem;
-      }
-    }
+    position: relative;
 
     & span {
       color: #d434fe;
@@ -130,6 +157,50 @@
 
     @include responsive(450px) {
       font-size: 4rem;
+    }
+  }
+
+  &__heading-img {
+    display: inline-block;
+    margin-bottom: -6px;
+
+    @include responsive(700px) {
+      height: 5.6rem;
+    }
+
+    @include responsive(550px) {
+      height: 4.8rem;
+    }
+
+    @include responsive(450px) {
+      height: 3.6rem;
+    }
+  }
+
+  &__bulb-img {
+    position: absolute;
+    top: 0;
+    right: 16rem;
+    transform: translateY(-60%);
+
+    @include responsive(1200px) {
+      right: 10rem;
+
+      transform: translateY(-70%);
+    }
+
+    @include responsive(700px) {
+      height: 4.8rem;
+    }
+
+    @include responsive(550px) {
+      right: 7.5rem;
+      transform: translateY(-75%);
+    }
+
+    @include responsive(450px) {
+      right: 5.5rem;
+      transform: translateY(-80%);
     }
   }
 

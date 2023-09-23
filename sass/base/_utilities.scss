@@ -35,3 +35,15 @@
 .hidden {
   display: none;
 }
+
+.star {
+  @include responsive(700px) {
+    height: 2.4rem;
+  }
+}
+
+.arrow {
+  @include responsive(700px) {
+    height: 3.6rem;
+  }
+}

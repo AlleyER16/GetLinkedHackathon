@@ -3,7 +3,7 @@
   z-index: 99;
   height: 8.2rem;
 
-  &.sticky {
+  .sticky & {
     position: fixed;
     top: 0;
     left: 0;
