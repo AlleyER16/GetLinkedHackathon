@@ -4,25 +4,35 @@
 
   position: relative;
 
+  height: 15rem;
+
+  @include responsive(850px) {
+    height: auto;
+  }
+
   &__left {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -25%);
+    transform: translate(-50%, -40%);
+    height: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
+    gap: 2.4rem;
 
     @include responsive(850px) {
       position: initial;
       left: 0;
       transform: none;
+      height: auto;
 
       flex-shrink: 0;
 
       padding-top: 0.8rem;
+
+      gap: 1.2rem;
     }
   }
 
@@ -30,19 +40,7 @@
     width: 4px;
     background-color: #d434fe;
 
-    height: 5rem;
-
-    &--long {
-      transform: scaleY(2);
-      transform-origin: bottom;
-    }
-
-    @include responsive(850px) {
-      transform: none;
-
-      flex: 1;
-      height: auto;
-    }
+    flex: 1;
   }
 
   &__number {

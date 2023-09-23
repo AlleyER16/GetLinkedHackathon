@@ -1,6 +1,4 @@
 .contact {
-  padding-bottom: 4.8rem;
-
   &__container {
     display: flex;
     align-items: center;
@@ -130,5 +128,80 @@
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+  }
+}
+
+.contact-section {
+  padding: 4rem 0 4.8rem;
+  min-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+
+  &__flare-1 {
+    position: absolute;
+    top: -30rem;
+    left: -40rem;
+    z-index: 0;
+    opacity: 0.68;
+    transition: all 0.3s;
+
+    @include responsive(1450px) {
+      left: -50rem;
+    }
+
+    @include responsive(1300px) {
+      left: -60rem;
+    }
+
+    @include responsive(1100px) {
+      left: -70rem;
+    }
+
+    @include responsive(950px) {
+      left: -90rem;
+    }
+
+    @include responsive(650px) {
+      left: -105rem;
+      top: -80rem;
+    }
+
+    @include responsive(400px) {
+      left: -120rem;
+      top: -95rem;
+    }
+  }
+
+  &__flare-2 {
+    position: absolute;
+    bottom: -40rem;
+    right: -40rem;
+    z-index: 0;
+    opacity: 0.68;
+    transition: all 0.3s;
+
+    @include responsive(1450px) {
+      right: -50rem;
+    }
+
+    @include responsive(1100px) {
+      right: -65rem;
+      bottom: -50rem;
+    }
+
+    @include responsive(650px) {
+      bottom: -70rem;
+      right: -80rem;
+    }
+
+    @include responsive(400px) {
+      bottom: -80rem;
+      right: -90rem;
+    }
+
+    @include responsive(360px) {
+      display: none;
+    }
   }
 }

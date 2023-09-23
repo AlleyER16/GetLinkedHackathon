@@ -3,7 +3,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 
   &--overview {
-    background-color: #140d27;
+    // background-color: #140d27;
   }
 
   &__container {
@@ -79,6 +79,11 @@
 
 .timeline-section {
   padding: 6.4rem 0;
+
+  &__container {
+    max-width: 120rem;
+    margin: auto;
+  }
 
   &__header {
     display: flex;
@@ -416,6 +421,296 @@
   @include responsive(500px) {
     & br {
       display: none;
+    }
+  }
+}
+
+.header-hero {
+  padding-top: 4rem;
+
+  position: relative;
+  overflow: hidden;
+
+  &__flare-1 {
+    position: absolute;
+    top: -10rem;
+    left: -10rem;
+    z-index: -1;
+    opacity: 0.68;
+    transition: all 0.3s;
+
+    @include responsive(1900px) {
+      left: -30rem;
+    }
+
+    @include responsive(1750px) {
+      left: -50rem;
+      top: 0;
+    }
+
+    @include responsive(1450px) {
+      left: -60rem;
+    }
+
+    @include responsive(1200px) {
+      left: -40rem;
+    }
+
+    @include responsive(700px) {
+      left: -80rem;
+      top: -30rem;
+    }
+
+    @include responsive(550px) {
+      left: -90rem;
+      top: -30rem;
+    }
+  }
+
+  &__flare-2 {
+    position: absolute;
+    top: -20rem;
+    right: -10rem;
+    z-index: -1;
+    opacity: 0.68;
+    transition: all 0.3s;
+
+    @include responsive(1450px) {
+      right: -20rem;
+    }
+
+    @include responsive(1200px) {
+      display: none;
+    }
+  }
+}
+
+.overview-to-faq-section {
+  position: relative;
+  overflow: hidden;
+
+  &__flare-1 {
+    position: absolute;
+    top: 10rem;
+    left: -5rem;
+    z-index: -1;
+    opacity: 0.68;
+    transition: all 0.3s;
+
+    @include responsive(1900px) {
+      left: -30rem;
+    }
+
+    @include responsive(1350px) {
+      left: -50rem;
+    }
+
+    @include responsive(950px) {
+      top: -10rem;
+      left: -60rem;
+    }
+
+    @include responsive(850px) {
+      top: 20rem;
+    }
+
+    @include responsive(650px) {
+      left: -80rem;
+    }
+  }
+
+  &__flare-2 {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    z-index: -1;
+    opacity: 0.68;
+  }
+
+  &__flare-3 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    opacity: 0.68;
+    transition: all 0.3s;
+
+    @include responsive(1700px) {
+      left: -15rem;
+      top: 45%;
+    }
+
+    @include responsive(1050px) {
+      left: -30rem;
+      top: 40%;
+    }
+
+    @include responsive(850px) {
+      left: -20rem;
+      top: 37%;
+    }
+
+    @include responsive(600px) {
+      left: -35rem;
+    }
+  }
+
+  &__flare-4 {
+    position: absolute;
+    top: 55%;
+    right: -50rem;
+    z-index: -1;
+    opacity: 0.68;
+    transition: all 0.3s;
+
+    @include responsive(1350px) {
+      right: -70rem;
+    }
+
+    @include responsive(600px) {
+      right: -90rem;
+    }
+  }
+}
+
+.prizes-to-privacy-section {
+  position: relative;
+  overflow: hidden;
+
+  &__flare-1 {
+    position: absolute;
+    top: -15rem;
+    left: 15rem;
+    z-index: 0;
+    opacity: 0.68;
+    transition: all 0.3s;
+
+    @include responsive(1800px) {
+      left: 10rem;
+    }
+
+    @include responsive(1650px) {
+      left: 0;
+    }
+
+    @include responsive(1350px) {
+      top: 8rem;
+      left: 25rem;
+    }
+
+    @include responsive(1200px) {
+      top: 0rem;
+      left: 10rem;
+    }
+
+    @include responsive(900px) {
+      top: -15rem;
+      left: -20rem;
+    }
+
+    @include responsive(500px) {
+      top: -35rem;
+      left: -35rem;
+    }
+
+    @include responsive(450px) {
+      left: -60rem;
+    }
+  }
+
+  &__flare-2 {
+    position: absolute;
+    top: 30rem;
+    right: 0;
+    z-index: 0;
+    opacity: 0.68;
+    transition: all 0.3s;
+
+    @include responsive(1350px) {
+      top: 60rem;
+    }
+
+    @include responsive(700px) {
+      right: -20rem;
+    }
+  }
+
+  &__flare-3 {
+    position: absolute;
+    top: 40rem;
+    left: -40rem;
+    z-index: 0;
+    opacity: 0.68;
+    transition: all 0.3s;
+
+    @include responsive(1800px) {
+      left: -50rem;
+    }
+
+    @include responsive(1650px) {
+      left: -60rem;
+      top: 45rem;
+    }
+
+    @include responsive(1350px) {
+      top: 80rem;
+    }
+
+    @include responsive(1200px) {
+      left: -70rem;
+    }
+
+    @include responsive(700px) {
+      left: -100rem;
+    }
+
+    @include responsive(500px) {
+      left: -120rem;
+    }
+  }
+
+  &__flare-4 {
+    position: absolute;
+    top: 100rem;
+    right: -80rem;
+    z-index: 0;
+    opacity: 0.68;
+    transition: all 0.3s;
+
+    @include responsive(1700px) {
+      right: -100rem;
+    }
+
+    @include responsive(1350px) {
+      top: 140rem;
+    }
+
+    @include responsive(1200px) {
+      right: -120rem;
+    }
+
+    @include responsive(700px) {
+      right: -140rem;
+    }
+
+    @include responsive(500px) {
+      right: -150rem;
+    }
+  }
+
+  &__flare-5 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.68;
+
+    display: none;
+
+    @include responsive(500px) {
+      display: block;
+      bottom: 45rem;
+      left: -10rem;
     }
   }
 }
