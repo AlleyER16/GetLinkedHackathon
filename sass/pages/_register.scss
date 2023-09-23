@@ -235,3 +235,30 @@
     }
   }
 }
+
+.register-main {
+  position: relative;
+
+  &__star-1 {
+    position: absolute;
+    top: 2.4rem;
+    left: 60rem;
+
+    @include responsive(600px) {
+      left: 0;
+      top: 50%;
+    }
+  }
+
+  &__star-2 {
+    position: absolute;
+    bottom: 0;
+    right: 10rem;
+    transform: translateY(50%);
+
+    @include responsive(600px) {
+      right: 0;
+      bottom: 20rem;
+    }
+  }
+}

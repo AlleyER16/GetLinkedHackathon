@@ -984,3 +984,68 @@
     right: 0;
   }
 }
+
+.prizes-container {
+  position: relative;
+
+  &__star-1 {
+    position: absolute;
+    top: 0;
+    left: 12rem;
+  }
+
+  &__star-2 {
+    position: absolute;
+    bottom: 0;
+    left: 12rem;
+
+    @include responsive(750px) {
+      display: none;
+    }
+  }
+}
+
+.prizes-heading {
+  position: relative;
+
+  &__star {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    @include responsive(1350px) {
+      right: -5.6rem;
+    }
+  }
+}
+
+.prizes {
+  position: relative;
+
+  &__star-1 {
+    position: absolute;
+    top: -4.8rem;
+    left: 7.2rem;
+  }
+
+  &__star-2 {
+    position: absolute;
+    top: 7.2rem;
+    right: 0;
+
+    @include responsive(750px) {
+      right: 2.4rem;
+    }
+  }
+
+  &__star-3 {
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+
+    @include responsive(750px) {
+      bottom: -1.2rem;
+    }
+  }
+}

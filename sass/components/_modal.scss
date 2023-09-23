@@ -7,7 +7,7 @@
   width: 70rem;
   max-width: calc(100vw - 4.8rem);
   border: 1px solid #d434fe;
-  background-color: rgba($color: #fff, $alpha: 0.1);
+  background-color: rgba($color: #fff, $alpha: 0.01);
   border-radius: 5px;
   padding: 4.8rem;
 
@@ -17,6 +17,29 @@
 
   @include responsive(400px) {
     padding: 2.4rem;
+  }
+
+  &__star-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(100%, -100%);
+  }
+
+  &__star-2 {
+    position: absolute;
+    left: 4.8rem;
+    top: 40%;
+  }
+
+  &__star-3 {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 4.8rem;
+
+    @include responsive(500px) {
+      bottom: -4.8rem;
+    }
   }
 
   &__img {
