@@ -254,6 +254,7 @@
 
     @include responsive(450px) {
       overflow-x: scroll;
+      overflow-y: hidden;
       max-width: initial;
       margin: initial;
 
