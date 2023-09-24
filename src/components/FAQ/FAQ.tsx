@@ -1,3 +1,6 @@
+import { useState } from "react";
+import cls from "classnames";
+
 import { IonIcon } from "@ionic/react";
 import { addOutline, removeOutline } from "ionicons/icons";
 
@@ -6,6 +9,8 @@ import starPurple from "../../assets/img/star-purple.png";
 import infoImg4 from "../../assets/img/info-img-4.png";
 
 const FAQ = () => {
+  const [open, setOpen] = useState<number | null>(null);
+
   return (
     <section className="info-section faq-section" id="faqs">
       <div className="container info-section__container">
@@ -19,12 +24,15 @@ const FAQ = () => {
           <p className="faq-heading mb-large">
             We got answers to the questions that you might
             <br />
-            want to ask about
+            want to ask about{" "}
             <span className="light">getlinked Hackathon 1.0</span>
           </p>
           <div>
-            <div className="accordion">
-              <div className="accordion__header">
+            <div className={cls("accordion", open === 1 && "accordion--open")}>
+              <div
+                className="accordion__header"
+                onClick={() => setOpen((op) => (op === 1 ? null : 1))}
+              >
                 <p>Can I work on a project I started before the hackathon?</p>
                 <span className="accordion__toggle">
                   <IonIcon icon={addOutline} />
@@ -38,8 +46,11 @@ const FAQ = () => {
                 molestias. Placeat, consectetur.
               </div>
             </div>
-            <div className="accordion">
-              <div className="accordion__header">
+            <div className={cls("accordion", open === 2 && "accordion--open")}>
+              <div
+                className="accordion__header"
+                onClick={() => setOpen((op) => (op === 2 ? null : 2))}
+              >
                 <p>What happens if I need help during the hackathon?</p>
                 <span className="accordion__toggle">
                   <IonIcon icon={addOutline} />
@@ -53,8 +64,11 @@ const FAQ = () => {
                 molestias. Placeat, consectetur.
               </div>
             </div>
-            <div className="accordion">
-              <div className="accordion__header">
+            <div className={cls("accordion", open === 3 && "accordion--open")}>
+              <div
+                className="accordion__header"
+                onClick={() => setOpen((op) => (op === 3 ? null : 3))}
+              >
                 <p>What happens if I don't have an idea for a project?</p>
                 <span className="accordion__toggle">
                   <IonIcon icon={addOutline} />
@@ -68,8 +82,11 @@ const FAQ = () => {
                 molestias. Placeat, consectetur.
               </div>
             </div>
-            <div className="accordion">
-              <div className="accordion__header">
+            <div className={cls("accordion", open === 4 && "accordion--open")}>
+              <div
+                className="accordion__header"
+                onClick={() => setOpen((op) => (op === 4 ? null : 4))}
+              >
                 <p>Can I join a team or do I have to come with one?</p>
                 <span className="accordion__toggle">
                   <IonIcon icon={addOutline} />
@@ -83,8 +100,11 @@ const FAQ = () => {
                 molestias. Placeat, consectetur.
               </div>
             </div>
-            <div className="accordion">
-              <div className="accordion__header">
+            <div className={cls("accordion", open === 5 && "accordion--open")}>
+              <div
+                className="accordion__header"
+                onClick={() => setOpen((op) => (op === 5 ? null : 5))}
+              >
                 <p>What happens after the hackathon ends</p>
                 <span className="accordion__toggle">
                   <IonIcon icon={addOutline} />
@@ -98,8 +118,11 @@ const FAQ = () => {
                 molestias. Placeat, consectetur.
               </div>
             </div>
-            <div className="accordion">
-              <div className="accordion__header">
+            <div className={cls("accordion", open === 6 && "accordion--open")}>
+              <div
+                className="accordion__header"
+                onClick={() => setOpen((op) => (op === 6 ? null : 6))}
+              >
                 <p>Can I work on a project I started before the hackathon?</p>
                 <span className="accordion__toggle">
                   <IonIcon icon={addOutline} />

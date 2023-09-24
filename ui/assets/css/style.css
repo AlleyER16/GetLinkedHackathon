@@ -1258,6 +1258,7 @@ body {
     @media only screen and (max-width: 450px) {
       .prizes-section__prizes {
         overflow-x: scroll;
+        overflow-y: hidden;
         max-width: initial;
         margin: initial; }
         .prizes-section__prizes::-webkit-scrollbar {
@@ -1359,13 +1360,12 @@ body {
           width: 1.8rem;
           height: 1.8rem; }
 
-.faq-heading {
-  font-size: 12px; }
-  .faq-heading span {
-    font-weight: 700; }
-  @media only screen and (max-width: 350px) {
-    .faq-heading br {
-      display: none; } }
+.faq-heading span {
+  font-weight: 700; }
+
+@media only screen and (max-width: 350px) {
+  .faq-heading br {
+    display: none; } }
 
 @media only screen and (max-width: 950px) {
   .privacy-heading br {
