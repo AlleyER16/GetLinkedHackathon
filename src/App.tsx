@@ -1,19 +1,43 @@
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import RemoveSticky from "./helpers/RemoveSticky/RemoveSticky";
 
-import Home from "./pages/Home/Home";
-import Contact from "./pages/Contact/Contact";
-import Register from "./pages/Register/Register";
+import Preloader from "./components/Preloader/Preloader";
+
+const Home = lazy(() => import("./pages/Home/Home"));
+const Contact = lazy(() => import("./pages/Contact/Contact"));
+const Register = lazy(() => import("./pages/Register/Register"));
 
 function App() {
   return (
     <BrowserRouter>
       <RemoveSticky />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/register" element={<Register />} />
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<Preloader />}>
+              <Home />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <Suspense fallback={<Preloader />}>
+              <Contact />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <Suspense fallback={<Preloader />}>
+              <Register />
+            </Suspense>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

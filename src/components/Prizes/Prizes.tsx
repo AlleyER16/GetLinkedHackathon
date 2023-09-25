@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+
 import starFaint from "../../assets/img/star-faint.png";
 import starLight from "../../assets/img/star-light.png";
 import starPurple from "../../assets/img/star-purple.png";
@@ -11,8 +13,27 @@ import medal2 from "../../assets/img/medal-2.png";
 import medal3 from "../../assets/img/medal-3.png";
 
 const Prizes = () => {
+  const prizesSectionEl = useRef<HTMLDivElement>({} as HTMLDivElement);
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      function (entries) {
+        const [ent] = entries;
+
+        if (ent.isIntersecting) {
+          prizesSectionEl.current.classList.add("start");
+        }
+      },
+      {
+        root: null,
+        threshold: 0,
+      }
+    );
+    obs.observe(prizesSectionEl.current);
+  }, []);
+
   return (
-    <section className="prizes-section">
+    <section className="prizes-section" ref={prizesSectionEl}>
       <img src={prizesSectionBg} alt="" className="prizes-section__bg-img" />
       <div className="container prizes-section__container prizes-container">
         <img
@@ -24,7 +45,7 @@ const Prizes = () => {
         <div className="prizes-section__img-block"></div>
         <div className="prizes-section__main">
           <div className="prizes-section__header mb-medium">
-            <div className="heading-primary prizes-heading">
+            <div className="heading-primary prizes-heading heading">
               <img
                 src={starPurple}
                 alt=""
@@ -34,19 +55,19 @@ const Prizes = () => {
               <br />
               <span>Rewards</span>
             </div>
-            <p>
+            <p className="content">
               Highlight of the prizes or rewards for winners and <br />
               for participants.
             </p>
           </div>
           <div className="prizes-section__img-container">
-            <img src={cup} alt="" className="prizes-section__prize-img" />
+            <img src={cup} alt="" className="prizes-section__prize-img img" />
           </div>
           <div className="prizes-section__prizes prizes">
             <img src={starLight} alt="" className="prizes__star-1 star" />
             <img src={starLight} alt="" className="prizes__star-2 star" />
             <img src={starFaint} alt="" className="prizes__star-3 star" />
-            <div className="prize">
+            <div className="prize second">
               <img src={medal2} alt="" className="prize__img" />
               <div className="prize__main">
                 <div className="prize__position">
@@ -56,7 +77,7 @@ const Prizes = () => {
                 <p className="prize__price">N300,000</p>
               </div>
             </div>
-            <div className="prize prize--first">
+            <div className="prize first">
               <img src={medal1} alt="" className="prize__img" />
               <div className="prize__main">
                 <div className="prize__position">
@@ -66,7 +87,7 @@ const Prizes = () => {
                 <p className="prize__price">N400,000</p>
               </div>
             </div>
-            <div className="prize">
+            <div className="prize third">
               <img src={medal3} alt="" className="prize__img" />
               <div className="prize__main">
                 <div className="prize__position">

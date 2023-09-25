@@ -41,6 +41,37 @@
     background-color: #d434fe;
 
     flex: 1;
+
+    transform: scale(0);
+    transform-origin: top;
+  }
+
+  &.first &__line {
+    transition: all 0.3s 1.1s;
+  }
+
+  &.second &__line {
+    transition: all 0.3s 2s;
+  }
+
+  &.third &__line {
+    transition: all 0.3s 2.9s;
+  }
+
+  &.fourth &__line {
+    transition: all 0.3s 3.3s;
+  }
+
+  &.fifth &__line {
+    transition: all 0.3s 4s;
+  }
+
+  &.sixth &__line {
+    transition: all 0.3s 4.5s;
+  }
+
+  .start &__line {
+    transform: scale(1);
   }
 
   &__number {
@@ -52,6 +83,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    opacity: 0;
+  }
+
+  &.first &__number {
+    transition: all 0.1s 1.3s;
+  }
+
+  &.second &__number {
+    transition: all 0.1s 2.2s;
+  }
+
+  &.third &__number {
+    transition: all 0.1s 3.1s;
+  }
+
+  &.fourth &__number {
+    transition: all 0.1s 3.5s;
+  }
+
+  &.fifth &__number {
+    transition: all 0.1s 4.2s;
+  }
+
+  &.sixth &__number {
+    transition: all 0.1s 4.7s;
+  }
+
+  .start &__number {
+    opacity: 1;
   }
 
   &__main {
@@ -60,6 +121,9 @@
     display: flex;
     align-items: center;
     gap: 12.8rem;
+
+    transform: translateY(-100%);
+    opacity: 0;
 
     & > * {
       flex: 1;
@@ -70,6 +134,35 @@
       gap: 1.2rem;
       align-items: flex-start;
     }
+  }
+
+  &.first &__main {
+    transition: all 0.1s 1.4s;
+  }
+
+  &.second &__main {
+    transition: all 0.1s 2.3s;
+  }
+
+  &.third &__main {
+    transition: all 0.1s 3.3s;
+  }
+
+  &.fourth &__main {
+    transition: all 0.3s 3.6s;
+  }
+
+  &.fifth &__main {
+    transition: all 0.3s 4.3s;
+  }
+
+  &.sixth &__main {
+    transition: all 0.3s 4.8s;
+  }
+
+  .start &__main {
+    transform: translateY(0);
+    opacity: 1;
   }
 
   &__content {

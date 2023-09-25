@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
+import Typewriter from "typewriter-effect";
+
 import { convertRemToPixels } from "../../utils/func";
 
 import heroTopImg from "../../assets/img/hero-top-img.png";
@@ -38,13 +40,21 @@ const Hero = () => {
       }
     );
     obs.observe(heroSectionEl.current);
+
+    heroSectionEl.current.classList.add("start");
   }, []);
 
   return (
     <section className="hero" ref={heroSectionEl}>
       <div className="hero__top">
         <h3 className="hero__top-heading">
-          Igniting a Revolution in HR Innovation
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString("Igniting a Revolution in HR Innovation")
+                .start();
+            }}
+          />
         </h3>
         <img src={heroTopImg} alt="" className="hero__top-img" />
       </div>
@@ -67,7 +77,10 @@ const Hero = () => {
               Participate in getlinked tech Hackathon 2023 stand
               <br />a chance to win a Big prize
             </p>
-            <button className="btn" onClick={() => navigate("/register")}>
+            <button
+              className="btn hero__btn"
+              onClick={() => navigate("/register")}
+            >
               Register
             </button>
             <div className="hero__time-blocks">

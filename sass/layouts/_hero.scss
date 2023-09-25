@@ -139,6 +139,16 @@
 
     position: relative;
 
+    // animation
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-100%);
+    opacity: 0;
+
+    .start & {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
     & span {
       color: #d434fe;
     }
@@ -206,8 +216,15 @@
 
   &__text {
     font-size: 2rem;
-
     margin-bottom: 4.2rem;
+
+    // animations
+    transition: all 0.3s ease-in 0.4s;
+    opacity: 0;
+
+    .start & {
+      opacity: 1;
+    }
 
     @include responsive(450px) {
       & br {
@@ -216,12 +233,27 @@
     }
   }
 
+  &__btn {
+    animation: slide-in-bounce 0.3s ease-in-out 0.8s;
+    animation-fill-mode: both;
+  }
+
   &__time-blocks {
     margin-top: 8.4rem;
 
     display: flex;
     align-items: center;
     gap: 3.6rem;
+
+    // animations
+    transition: all 0.3s ease-in-out 0.8s;
+    transform: translateY(100%);
+    opacity: 0;
+
+    .start & {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   &__time-block {
@@ -249,7 +281,16 @@
     width: 98rem;
 
     margin-bottom: -2.4rem;
-    transition: all 0.3s;
+
+    // Animations
+    transition: all 0.4s ease-in 0.8s;
+    transform: translateX(100%);
+    opacity: 0;
+
+    .start & {
+      transform: translateX(0);
+      opacity: 1;
+    }
 
     @include responsive(1400px) {
       margin-right: -10rem;

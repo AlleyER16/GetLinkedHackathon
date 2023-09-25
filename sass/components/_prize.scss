@@ -3,11 +3,11 @@
   flex-direction: column;
   align-items: center;
 
-  &--first {
-    transform: translateY(-7rem);
+  &.first {
+    margin-top: -7rem;
 
     @include responsive(650px) {
-      transform: translateY(-3rem);
+      margin-top: -3rem;
     }
   }
 
@@ -16,7 +16,7 @@
     width: 70%;
   }
 
-  &--first &__img {
+  &.first &__img {
     width: 100%;
     transform: scale(1.1);
 
@@ -46,7 +46,7 @@
     }
   }
 
-  &--first &__main {
+  &.first &__main {
     border: 1px solid #903aff;
     background-color: rgba($color: #903aff, $alpha: 0.12);
   }
@@ -94,7 +94,7 @@
     }
   }
 
-  &--first &__price {
+  &.first &__price {
     color: #903aff;
   }
 }

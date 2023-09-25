@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+
 import { IonIcon } from "@ionic/react";
 import { checkmarkOutline } from "ionicons/icons";
 
@@ -8,18 +10,37 @@ import starFaint from "../../assets/img/star-faint.png";
 import securityImg from "../../assets/img/security-img.png";
 
 const Privacy = () => {
+  const privacySectionEl = useRef<HTMLDivElement>({} as HTMLDivElement);
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      function (entries) {
+        const [ent] = entries;
+
+        if (ent.isIntersecting) {
+          privacySectionEl.current.classList.add("start");
+        }
+      },
+      {
+        root: null,
+        threshold: 0,
+      }
+    );
+    obs.observe(privacySectionEl.current);
+  }, []);
+
   return (
-    <section className="privacy-section">
+    <section className="privacy-section" ref={privacySectionEl}>
       <div className="container privacy-section__container">
         <div className="privacy-section__main privacy">
           <img src={starFaint} alt="" className="privacy__star-1 star" />
           <img src={starPurpleSm} alt="" className="privacy__star-2 star" />
           <img src={starPurple} alt="" className="privacy__star-3 star" />
-          <h3 className="heading-primary">
+          <h3 className="heading-primary heading">
             Privacy Policy and <br />
             <span>Terms</span>
           </h3>
-          <div className="info-section__content mb-large">
+          <div className="info-section__content mb-large content">
             <p>Last updated on September 12, 2023</p>
             <p className="privacy-heading">
               Below are our privacy & policy, which outline a lot of goodies.
@@ -27,7 +48,7 @@ const Privacy = () => {
               it’s our aim to always take of our participant
             </p>
           </div>
-          <div className="privacy-section__info">
+          <div className="privacy-section__info info">
             <p className="mb-large">
               At getlinked tech Hackathon 1.0, we value your privacy and are
               committed to protecting your personal information. This Privacy

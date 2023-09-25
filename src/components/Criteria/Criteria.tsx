@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+
 import starFaint from "../../assets/img/star-faint.png";
 import starLight from "../../assets/img/star-light.png";
 import starPurple from "../../assets/img/star-purple.png";
@@ -5,8 +7,30 @@ import starPurple from "../../assets/img/star-purple.png";
 import infoImg3 from "../../assets/img/info-img-3.png";
 
 const Criteria = () => {
+  const criteriaSectionEl = useRef<HTMLDivElement>({} as HTMLDivElement);
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      function (entries) {
+        const [ent] = entries;
+
+        if (ent.isIntersecting) {
+          criteriaSectionEl.current.classList.add("start");
+        }
+      },
+      {
+        root: null,
+        threshold: 0,
+      }
+    );
+    obs.observe(criteriaSectionEl.current);
+  }, []);
+
   return (
-    <section className="info-section criteria-section">
+    <section
+      className="info-section criteria-section info-section--criteria"
+      ref={criteriaSectionEl}
+    >
       <img src={starLight} alt="" className="criteria-section__star star" />
       <div className="container info-section__container">
         <div className="info-section__img-block criteria-img-block align-right">
@@ -32,12 +56,12 @@ const Criteria = () => {
           />
         </div>
         <div className="info-section__main">
-          <div className="heading-primary">
+          <div className="heading-primary heading">
             Judging Criteria
             <br />
             <span>Key attributes</span>
           </div>
-          <div className="info-section__content mb-medium">
+          <div className="info-section__content mb-medium contents">
             <p>
               <span>Innovation and Creativity:</span> Evaluate the uniqueness
               and creativity of the solution. Consider whether it addresses a

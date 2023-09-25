@@ -1,0 +1,32 @@
+.scroll-to-top {
+  &:link,
+  &:visited {
+    position: fixed;
+    bottom: 2.4rem;
+    right: 2.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    background: linear-gradient(
+      270deg,
+      #903aff 0%,
+      #d434fe 56.42%,
+      #ff26b9 99.99%,
+      #fe34b9 100%
+    );
+
+    animation: bounce 0.4s ease infinite alternate;
+  }
+
+  & ion-icon {
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: #fff;
+  }
+}

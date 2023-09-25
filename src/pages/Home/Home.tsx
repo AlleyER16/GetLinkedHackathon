@@ -26,6 +26,7 @@ import flare8 from "../../assets/img/flare-8.png";
 import flare9 from "../../assets/img/flare-9.png";
 import flare10 from "../../assets/img/flare-10.png";
 import flare11 from "../../assets/img/flare-11.png";
+import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
 
 const Home = () => {
   const href = useLocation().hash;
@@ -108,6 +109,7 @@ const Home = () => {
         <Privacy />
       </div>
       <Footer />
+      <ScrollToTop />
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import cls from "classnames";
 
 import { IonIcon } from "@ionic/react";
@@ -11,23 +11,46 @@ import infoImg4 from "../../assets/img/info-img-4.png";
 const FAQ = () => {
   const [open, setOpen] = useState<number | null>(null);
 
+  const faqSectionEl = useRef<HTMLDivElement>({} as HTMLDivElement);
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      function (entries) {
+        const [ent] = entries;
+
+        if (ent.isIntersecting) {
+          faqSectionEl.current.classList.add("start");
+        }
+      },
+      {
+        root: null,
+        threshold: 0,
+      }
+    );
+    obs.observe(faqSectionEl.current);
+  }, []);
+
   return (
-    <section className="info-section faq-section" id="faqs">
+    <section
+      className="info-section faq-section info-section--faq"
+      id="faqs"
+      ref={faqSectionEl}
+    >
       <div className="container info-section__container">
         <div className="info-section__main">
-          <div className="heading-primary faq-header">
+          <div className="heading-primary faq-header heading">
             <img src={starPurple} alt="" className="faq-header__star star" />
             Frequently Ask
             <br />
             <span>Questions</span>
           </div>
-          <p className="faq-heading mb-large">
+          <p className="faq-heading mb-large content">
             We got answers to the questions that you might
             <br />
             want to ask about{" "}
             <span className="light">getlinked Hackathon 1.0</span>
           </p>
-          <div>
+          <div className="accordions">
             <div className={cls("accordion", open === 1 && "accordion--open")}>
               <div
                 className="accordion__header"

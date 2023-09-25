@@ -1,3 +1,13 @@
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   z-index: 99;
@@ -9,6 +19,9 @@
     left: 0;
     width: 100%;
     background-color: #150e28;
+
+    animation: slide-in 0.3s ease-in-out;
+    animation-fill-mode: both;
   }
 
   &--1 {

@@ -1,14 +1,35 @@
+import { useEffect, useRef } from "react";
+
 import starFaint from "../../assets/img/star-faint.png";
 import starLight from "../../assets/img/star-light.png";
 import starPurple from "../../assets/img/star-purple.png";
 
 const Timeline = () => {
+  const timelineSectionEl = useRef<HTMLDivElement>({} as HTMLDivElement);
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      function (entries) {
+        const [ent] = entries;
+
+        if (ent.isIntersecting) {
+          timelineSectionEl.current.classList.add("start");
+        }
+      },
+      {
+        root: null,
+        threshold: 0,
+      }
+    );
+    obs.observe(timelineSectionEl.current);
+  }, []);
+
   return (
-    <section className="timeline-section" id="timeline">
+    <section className="timeline-section" id="timeline" ref={timelineSectionEl}>
       <div className="container timeline-section__container">
         <div className="timeline-section__header">
-          <h3 className="timeline-section__heading">Timeline</h3>
-          <p className="timeline-section__heading-subtext">
+          <h3 className="timeline-section__heading heading">Timeline</h3>
+          <p className="timeline-section__heading-subtext content">
             Here is the breakdown of the time we anticipate <br />
             using for the upcoming event.
           </p>
@@ -18,7 +39,7 @@ const Timeline = () => {
           <img src={starLight} alt="" className="timelines__star-2 star" />
           <img src={starFaint} alt="" className="timelines__star-3 star" />
 
-          <div className="timeline">
+          <div className="timeline first">
             <div className="timeline__left">
               <div className="timeline__line timeline__line--long"></div>
               <div className="timeline__number">1</div>
@@ -34,7 +55,7 @@ const Timeline = () => {
               <p className="timeline__date">November 18, 2023</p>
             </div>
           </div>
-          <div className="timeline">
+          <div className="timeline second">
             <div className="timeline__left">
               <div className="timeline__line"></div>
               <div className="timeline__number">2</div>
@@ -50,7 +71,7 @@ const Timeline = () => {
               <p className="timeline__date">November 18, 2023</p>
             </div>
           </div>
-          <div className="timeline">
+          <div className="timeline third">
             <div className="timeline__left">
               <div className="timeline__line"></div>
               <div className="timeline__number">3</div>
@@ -65,7 +86,7 @@ const Timeline = () => {
               <p className="timeline__date">November 18, 2023</p>
             </div>
           </div>
-          <div className="timeline">
+          <div className="timeline fourth">
             <div className="timeline__left">
               <div className="timeline__line"></div>
               <div className="timeline__number">4</div>
@@ -83,7 +104,7 @@ const Timeline = () => {
               <p className="timeline__date">November 18, 2023</p>
             </div>
           </div>
-          <div className="timeline">
+          <div className="timeline fifth">
             <div className="timeline__left">
               <div className="timeline__line"></div>
               <div className="timeline__number">5</div>
@@ -101,7 +122,7 @@ const Timeline = () => {
               <p className="timeline__date">November 18, 2023</p>
             </div>
           </div>
-          <div className="timeline">
+          <div className="timeline sixth">
             <div className="timeline__left">
               <div className="timeline__line"></div>
               <div className="timeline__number">6</div>
